@@ -41,13 +41,13 @@ bot.on('start', function()
 {
 	// more information about additional params https://api.slack.com/methods/chat.postMessage 
     var params = {
-        icon_emoji: ':cat:'
-    };
+        icon_emoji: ':penis:'
+		};
     //bot.postMessageToUser('username', 'meow!', params);
     //bot.postMessageToChannel('general', 'meow!', params);
 	
-	//bot.postMessageToGroup('emorangers', 'REACTOR CORE ONLINE', params);
-	
+	//bot.postMessageToGroup('emorangers', 'like this', params);
+	bot.postMessageToGroup('emorangers', ':penis::penis::penis::penis::penis::penis::penis::penis::penis::penis::penis::penis::penis:', params);
 });
 
 
@@ -84,13 +84,17 @@ bot.on('open', function ()
 
 bot.on('message', function(message) 
 {
+	var params = {
+        icon_emoji: ':penis:'
+	};
 	// all ingoing events https://api.slack.com/rtm 
     console.log(message);
-	
+	//bot.postMessageToGroup('emorangers', 'DICK TIME LOL :penis::penis::penis::penis::penis::penis::penis::penis::penis::penis::penis::penis::penis:', params);
 	var channelList = bot.getChannels();
 	
 	channelList.then( function(data)
 	{
+		
 		console.log(data);
 	});
 	
