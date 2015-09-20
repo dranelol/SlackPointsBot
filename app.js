@@ -1,5 +1,8 @@
 var express = require('express');
 var bodyParser = require('body-parser');
+var pointsBot = require('./pointsBot');
+
+
 
 var app = express();
 var port = process.env.PORT || 3000;
@@ -19,3 +22,5 @@ app.use(function (err, req, res, next) {
 app.listen(port, function () {
   console.log('Slack bot listening on port ' + port);
 });
+
+app.post('/points', pointsBot);
